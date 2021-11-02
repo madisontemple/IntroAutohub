@@ -145,8 +145,8 @@ function AboutAutohub() {
 
       <DetailWrapper>
         <DetailPart>
-          <h3 style={{textAlign:"left"}}>세부 면적</h3>
-          <p style={{textAlign:"left"}}>
+          <h3 style={{ textAlign: "left" }}>세부 면적</h3>
+          <p style={{ textAlign: "left" }}>
             최대8,000대의 실내 전시가 가능하며, 최대1,300대의 고객 주차가 가능한
             대형 복합 단지입니다.
           </p>
@@ -155,23 +155,39 @@ function AboutAutohub() {
           <div className="TablePart" style={{ width: "1200px" }}>
             {" "}
             {/* 건축 면적정보 테이블 부분입니다. */}
-            <table style={{
+            <table
+              style={{
                 width: "100%",
                 borderCollapse: "collapse",
                 border: " solid 1px black",
-              }}>
-
+              }}
+            >
               <tr style={{}}>
-                <th style={{ fontWeight: "bold", fontSize: "25px",padding: "20px",}}>건축 개요</th>
+                <th
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "25px",
+                    padding: "20px",
+                  }}
+                >
+                  건축 개요
+                </th>
               </tr>
 
               <tr>
-                <td style={{ borderBottom: "1px solid #ddd", padding: "10px 25px",}}>
+                <td
+                  style={{
+                    borderBottom: "1px solid #ddd",
+                    padding: "10px 25px",
+                  }}
+                >
                   토지면적
                 </td>
+
                 <td style={{ borderBottom: "1px solid #ddd" }}>
                   88,716 ㎡ (26,836,59평)
                 </td>
+
                 <td style={{ borderBottom: "1px solid #ddd" }}></td>
               </tr>
               <Tr title="건축연면적" value="175,676,72 ㎡ (53,142.21평)" />
@@ -181,47 +197,23 @@ function AboutAutohub() {
               <Tr title="용적률" value="55.15%" />
 
               <tr style={{}}>
-                <th style={{ fontWeight: "bold",fontSize: "25px",padding: "20px",}}>
+                <th
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "25px",
+                    padding: "20px",
+                  }}
+                >
                   용도별 면적
                 </th>
               </tr>
 
-              <Tr2
-                title="구분"
-                value="면적"
-                value2="구성비"
-                percentage="구분"
-              />
-              <Tr2
-                title="전시장"
-                value="139,520㎡ "
-                value2="(42,205평)"
-                percentage="79%"
-              />
-              <Tr2
-                title="근린생활"
-                value="20,631㎡ "
-                value2="(6,241평)"
-                percentage="12%"
-              />
-              <Tr2
-                title="정비시설"
-                value="15,526㎡ "
-                value2="(4,697평)"
-                percentage="9%"
-              />
-              <Tr2
-                title="합계"
-                value="175,677㎡ "
-                value2="(53,142평)"
-                percentage="100%"
-              />
-              <Tr2
-                title="구분"
-                value="면적"
-                value2="구성비"
-                percentage="구분"
-              />
+              <Tr2 title="구분" value="면적" value2="구성비" percentage="구분"/>
+              <Tr2 title="전시장" value="139,520㎡ " value2="(42,205평)" percentage="79%"/>
+              <Tr2 title="근린생활" value="20,631㎡ " value2="(6,241평)" percentage="12%" />
+              <Tr2 title="정비시설" value="15,526㎡ " value2="(4,697평)" percentage="9%" />
+              <Tr2 title="합계" value="175,677㎡ " value2="(53,142평)" percentage="100%" />
+              <Tr2 title="구분" value="면적" value2="구성비" percentage="구분" />
               <Tr title="*별도.고객 주차장:27,500㎡ (8,319평) 1,270대" />
             </table>
           </div>
@@ -229,45 +221,91 @@ function AboutAutohub() {
       </DetailWrapper>
 
       <FacilitiesWrapper>
-      <div className="FacilitiesPart">
-      <h2 style={{textAlign:"left"}}>시설 안내</h2>
-      <p style={{textAlign:"left"}}>다양한 시설이 입점 되어 있는 자동차 복합 문화 공간</p>
+        <div className="FacilitiesPart">
+          <h2 style={{ textAlign: "left" }}>시설 안내</h2>
+          <p style={{ textAlign: "left" }}>
+            다양한 시설이 입점 되어 있는 자동차 복합 문화 공간
+          </p>
 
-      <table  style={{width: "1200px",
-      height:"200px",
-      textAlign:"center",
-                borderCollapse: "collapse",
-                border: " solid 1px black",}}>
-        <tr >
-          <td><img src="/images/자동차관련시설1.png" /><br/>자동차 관련시설</td><td>상품화 관련 시설</td><td>근린 생활 시설</td>
-        </tr>
-        <tr >
-          <td>매매상사 및 차량 전시장<br/>
-              자동차 경매장<br/>
-              차량 용품 전문점<br/>
-              금융사(캐피탈, 보험)<br/>
-              차량 등록 사무소</td>
-              
-              <td>1급 정비소<br/>
-              성능 점검장<br/>
-              세차 / 광택<br/>
-              포토존<br/>
-              기타 정비 및 휠 복원</td>
+          <table
+            style={{
+              width: "1200px",
+              height: "400px",
+              textAlign: "center",
+              borderCollapse: "collapse",
+              border: " solid 1px black",
+            }}
+          >
+            <tr>
+              <td>
+                <img src="/images/자동차관련시설1.png" />
+                <br />
+                자동차 관련시설
+              </td>
+              <td>
+                <img src="/images/차량정비1.png" style={{ width: "80px" }} />
+                <br />
+                상품화 관련 시설
+              </td>
+              <td>
+                <img src="/images/근린생활1.png" style={{ width: "80px" }} />
+                <br />
+                근린 생활 시설
+              </td>
+            </tr>
 
-              <td>매매상사 및 차량 전시장<br/>
-              자동차 경매장<br/>
-              차량 용품 전문점<br/>
-              금융사(캐피탈, 보험)<br/>
-              차량 등록 사무소</td>
-        </tr>
-      </table>
-      
-      
-       </div>
+            <tr>
+              <td>
+                매매상사 및 차량 전시장
+                <br />
+                자동차 경매장
+                <br />
+                차량 용품 전문점
+                <br />
+                금융사(캐피탈, 보험)
+                <br />
+                차량 등록 사무소
+              </td>
 
+              <td>
+                1급 정비소
+                <br />
+                성능 점검장
+                <br />
+                세차 / 광택
+                <br />
+                포토존
+                <br />
+                기타 정비 및 휠 복원
+              </td>
 
-
+              <td>
+                매매상사 및 차량 전시장
+                <br />
+                자동차 경매장
+                <br />
+                차량 용품 전문점
+                <br />
+                금융사(캐피탈, 보험)
+                <br />
+                차량 등록 사무소
+              </td>
+            </tr>
+          </table>
+        </div>
       </FacilitiesWrapper>
+
+      <LocationWrapper>
+        <div class="LocationPart" style={{textAlign:"center"}}>
+        <h2 style={{ fontSize:"30px"}}>최적의 교통 환경과 입지</h2>
+        <p style={{fontSize:"20px" }}> <br/>
+        수원 신갈IC와 3분 거리에 위치하여 서울 강남권과 경기 암부 30분 이내에 도착 가능합니다.</p>
+        <div>
+        <img style={{width:"900px"}} src="/images/오토허브건물2.jpeg" />
+        </div>
+        </div>
+
+      </LocationWrapper>
     </Body>
   );
 }
@@ -293,18 +331,14 @@ const LI = styled.li`
 const IntroWrappeer = styled.div``;
 const IntroPart = styled.div`
   text-align: center;
-  
 `;
 
 const DetailWrapper = styled.div`
   padding-top: 50px;
   display: flex;
   justify-content: center;
-  
 `;
-const DetailPart = styled.div`
-
-`;
+const DetailPart = styled.div``;
 const Table = styled.table;
 const Button = styled.button`
   float: left;
@@ -319,5 +353,12 @@ const Button = styled.button`
 const FacilitiesWrapper = styled.div`
   display: flex;
   justify-content: center;
+`;
+const LocationWrapper = styled.div`
+padding: 0 200px;
+margin-top: 50px;
+display: flex;
+justify-content: center;
+
 `;
 export default AboutAutohub;
