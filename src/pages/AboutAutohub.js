@@ -63,36 +63,16 @@ function AboutAutohub() {
   function Tr2({ title, value, value2, percentage }) {
     return (
       <tr>
-        <td
-          style={{
-            borderBottom: "1px solid #ddd",
-            padding: "10px 25px",
-          }}
-        >
+        <td style={{ borderBottom: "1px solid #ddd", padding: "10px 25px" }}>
           {title}
         </td>
-        <td
-          style={{
-            borderBottom: "1px solid #ddd",
-            textAlign: "center",
-          }}
-        >
+        <td style={{ borderBottom: "1px solid #ddd", textAlign: "center" }}>
           {value}
         </td>
-        <td
-          style={{
-            borderBottom: "1px solid #ddd",
-            textAlign: "center",
-          }}
-        >
+        <td style={{ borderBottom: "1px solid #ddd", textAlign: "center" }}>
           {value2}
         </td>
-        <td
-          style={{
-            borderBottom: "1px solid #ddd",
-            textAlign: "center",
-          }}
-        >
+        <td style={{ borderBottom: "1px solid #ddd", textAlign: "center" }}>
           {percentage}
         </td>
       </tr>
@@ -129,10 +109,13 @@ function AboutAutohub() {
             <img
               src="/images/오토허브 소개 배너.png"
               style={{ width: "100%" }}
+              alt="오토허브소개 이미지 배너입니다."
             />
           </div>
 
           <div className="AHImagePart" style={{}}>
+            {" "}
+            {/* 이 페이지 윘부분에 있는 오토허브 건물 사진입니다. */}
             <img
               src="/images/오토허브 건물사진4.jpg"
               style={{ width: "1200px", height: "700px" }}
@@ -162,38 +145,28 @@ function AboutAutohub() {
 
       <DetailWrapper>
         <DetailPart>
-          <h3>세부 면적</h3>
-          <p>
+          <h3 style={{textAlign:"left"}}>세부 면적</h3>
+          <p style={{textAlign:"left"}}>
             최대8,000대의 실내 전시가 가능하며, 최대1,300대의 고객 주차가 가능한
             대형 복합 단지입니다.
           </p>
           <Button>건축 면적 정보</Button>
+
           <div className="TablePart" style={{ width: "1200px" }}>
-            <table
-              style={{
+            {" "}
+            {/* 건축 면적정보 테이블 부분입니다. */}
+            <table style={{
                 width: "100%",
                 borderCollapse: "collapse",
                 border: " solid 1px black",
-              }}
-            >
+              }}>
+
               <tr style={{}}>
-                <th
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: "25px",
-                    padding: "20px",
-                  }}
-                >
-                  건축 개요
-                </th>
+                <th style={{ fontWeight: "bold", fontSize: "25px",padding: "20px",}}>건축 개요</th>
               </tr>
+
               <tr>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    padding: "10px 25px",
-                  }}
-                >
+                <td style={{ borderBottom: "1px solid #ddd", padding: "10px 25px",}}>
                   토지면적
                 </td>
                 <td style={{ borderBottom: "1px solid #ddd" }}>
@@ -208,167 +181,99 @@ function AboutAutohub() {
               <Tr title="용적률" value="55.15%" />
 
               <tr style={{}}>
-                <th
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: "25px",
-                    padding: "20px",
-                  }}
-                >
+                <th style={{ fontWeight: "bold",fontSize: "25px",padding: "20px",}}>
                   용도별 면적
                 </th>
               </tr>
 
-              <tr>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    padding: "10px 25px",
-                    textAlign: "center",
-                  }}
-                >
-                  전시장
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  139,520 ㎡
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  (42,205평)
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  79%
-                </td>
-              </tr>
-              <tr>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    padding: "10px 25px",
-                    textAlign: "center",
-                  }}
-                >
-                  용도
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  자동차 관련 시설 및 부대시설
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  토지면적
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  88,716 ㎡ (26,836,59평)
-                </td>
-              </tr>
-              <tr>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    padding: "10px 25px",
-                    textAlign: "center",
-                  }}
-                >
-                  층수
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  지하 4층, 지상 4층
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  토지면적
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  88,716 ㎡ (26,836,59평)
-                </td>
-              </tr>
-              <tr>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    padding: "10px 25px",
-                    textAlign: "center",
-                  }}
-                >
-                  건폐율
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  16.81%
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  토지면적
-                </td>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    textAlign: "center",
-                  }}
-                >
-                  88,716 ㎡ (26,836,59평)
-                </td>
-              </tr>
+              <Tr2
+                title="구분"
+                value="면적"
+                value2="구성비"
+                percentage="구분"
+              />
+              <Tr2
+                title="전시장"
+                value="139,520㎡ "
+                value2="(42,205평)"
+                percentage="79%"
+              />
+              <Tr2
+                title="근린생활"
+                value="20,631㎡ "
+                value2="(6,241평)"
+                percentage="12%"
+              />
+              <Tr2
+                title="정비시설"
+                value="15,526㎡ "
+                value2="(4,697평)"
+                percentage="9%"
+              />
+              <Tr2
+                title="합계"
+                value="175,677㎡ "
+                value2="(53,142평)"
+                percentage="100%"
+              />
+              <Tr2
+                title="구분"
+                value="면적"
+                value2="구성비"
+                percentage="구분"
+              />
+              <Tr title="*별도.고객 주차장:27,500㎡ (8,319평) 1,270대" />
             </table>
           </div>
         </DetailPart>
       </DetailWrapper>
+
+      <FacilitiesWrapper>
+      <div className="FacilitiesPart">
+      <h2 style={{textAlign:"left"}}>시설 안내</h2>
+      <p style={{textAlign:"left"}}>다양한 시설이 입점 되어 있는 자동차 복합 문화 공간</p>
+
+      <table  style={{width: "1200px",
+      height:"200px",
+      textAlign:"center",
+                borderCollapse: "collapse",
+                border: " solid 1px black",}}>
+        <tr >
+          <td><img src="/images/자동차관련시설1.png" /><br/>자동차 관련시설</td><td>상품화 관련 시설</td><td>근린 생활 시설</td>
+        </tr>
+        <tr >
+          <td>매매상사 및 차량 전시장<br/>
+              자동차 경매장<br/>
+              차량 용품 전문점<br/>
+              금융사(캐피탈, 보험)<br/>
+              차량 등록 사무소</td>
+              
+              <td>1급 정비소<br/>
+              성능 점검장<br/>
+              세차 / 광택<br/>
+              포토존<br/>
+              기타 정비 및 휠 복원</td>
+
+              <td>매매상사 및 차량 전시장<br/>
+              자동차 경매장<br/>
+              차량 용품 전문점<br/>
+              금융사(캐피탈, 보험)<br/>
+              차량 등록 사무소</td>
+        </tr>
+      </table>
+      
+      
+       </div>
+
+
+
+      </FacilitiesWrapper>
     </Body>
   );
 }
 
 const Body = styled.body`
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-family: "Noto Sans KR", sans-serif;
 `;
 const Header = styled.div`
@@ -388,25 +293,31 @@ const LI = styled.li`
 const IntroWrappeer = styled.div``;
 const IntroPart = styled.div`
   text-align: center;
+  
 `;
 
 const DetailWrapper = styled.div`
-  /* text-align: center; */
-  padding: 30px;
-  padding-right: 30px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  
 `;
 const DetailPart = styled.div`
-  /* text-align:left; */
-  padding: 8%;
-  margin: 8%;
+
 `;
 const Table = styled.table;
 const Button = styled.button`
+  float: left;
   width: 150px;
   height: 50px;
   font-size: 20px;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 3px #808080;
+`;
+
+const FacilitiesWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 export default AboutAutohub;
