@@ -48,9 +48,7 @@ function Floor() {
       
       <div style={{position: "relative;"}}>
         <AHBuilding1 src="/images/오토허브건물2.jpeg" />
-        <AHBuilding2 src="/images/오토허브 단지1.jpeg" />
-          <AHBuilding3 src="/images/오토허브 단지2.jpeg" />
-          <AHBuilding4 src="/images/오토허브 단지3.jpeg" />
+        
       </div>
       
       <AboutFloor data-aos="fade-up">
@@ -66,19 +64,10 @@ function Floor() {
 
         <ImagePart data-aos="fade-up">
           <AutohubBuilding src="/images/Autohub_BuldingFloor.png" />
-          
         </ImagePart>
 
-        {/* <Table>
-  <Tr>
-    <Th>A동</Th>
-    <Th>B동</Th>
-    <Th>C동</Th>
-  </Tr>
-
-  </Table> */}
         <InfoTable style={{}} data-aos="fade-up">
-          <Table1 style={{ width: "290px", marginRight: "50px",position:"relative",left:"20px",bottom:"7px" }}>
+          <Table1 style={{ width: "290px" }}>
             <Tr1>
               <Th1 style={{}}>C동</Th1>
             </Tr1>
@@ -146,7 +135,7 @@ function Floor() {
           </Table1>
 
           <Table1
-            style={{ width: "290px", marginRight: "70px", marginTop: "30px",position:"relative",left:"20px" }}
+            style={{ width: "290px",  }}
           >
             <Tr1>
               <Th1 style={{}}>B동</Th1>
@@ -201,7 +190,7 @@ function Floor() {
             </Tr1>
           </Table1>
 
-          <Table1 style={{ width: "600px", marginRight: "20px",marginTop:"38px" }}>
+          <Table1 style={{ width: "600px"}}>
             <Tr1>
               <Th1 style={{}}>A동</Th1>
             </Tr1>
@@ -476,15 +465,12 @@ height: 70px;
   margin-left: 38%;
   display: flex;
   justify-content: center;
-
-  
- 
-
+  align-items: center;
 
 `;
 const FloorInfo = styled.h2`
 color: white;
-letter-spacing: .7rem;
+letter-spacing: .8rem;
 font-family: 'Merriweather Sans', sans-serif;
 `;
 
@@ -515,29 +501,26 @@ const Comment1 = styled.span`
 const ImagePart = styled.div`
   max-width: 1300px;
   min-width: 340px;
-  margin : 0 auto
-  /* justify-content: center;
-  align-items: center;
-  text-align: center; */
+  margin : 0 auto;
+  display: flex;
+  justify-contents: center;
+  
 `;
 const AutohubBuilding = styled.img`
   width: 100%;
   height: 200px;
-  /* margin-top: 50px;
-  margin-left: 80px;
-  display: flex; */
+  
 `;
 
 const InfoTable = styled.div`
-  margin-left: 30px;
+ 
   max-width: 1500px;
   min-width: 340px;
   /* flex-wrap: initial; */
   display: flex;
-  flex-grow: 0;
-  margin : 0 auto;
-  justify-content: center;
-  align-items: center;
+  
+  
+  
 `;
 const CTable = styled.div``;
 const BTable = styled.div``;

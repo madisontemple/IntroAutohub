@@ -42,20 +42,29 @@ function AboutAutohub() {
   const BmwClick = () => history.push("./Bmw");
   const GenesisClick = () => history.push("./Genesis");
 
+  const AbountClick = () => history.push("./AboutAutohub");
   const FloorClick = () => history.push("./Floor");
+  const CharClick = () => history.push("./CharAutohub");
   const ContactClick = () => history.push("./Contact");
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
 
+  // useEffect
+  // useState
+  // useCallback
+
+  // useInput
+
   function Tr({ title, value }) {
     return (
-      <tr>
-        <td style={{ borderBottom: "1px solid #ddd", padding: "10px 25px" }}>
+      <tr style={{}}>
+        <td style={{ borderBottom: "1px solid #ddd", padding: "10px 30px", }}>
           {title}
         </td>
-        <td style={{ borderBottom: "1px solid #ddd" }}>{value}</td>
+        <td style={{ borderBottom: "1px solid #ddd",paddingLeft:"80px" }}>{value}</td>
+        <td style={{ borderBottom: "1px solid #ddd" }}></td>
         <td style={{ borderBottom: "1px solid #ddd" }}></td>
       </tr>
     );
@@ -63,31 +72,56 @@ function AboutAutohub() {
   function Tr2({ title, value, value2, percentage }) {
     return (
       <tr>
-        <td style={{ borderBottom: "1px solid #ddd", padding: "10px 25px" }}>
+        <td style={{ borderBottom: "1px solid #ddd", padding: "10px 30px" }}>
           {title}
         </td>
-        <td style={{ borderBottom: "1px solid #ddd", textAlign: "center" }}>
+        <td style={{ borderBottom: "1px solid #ddd", textAlign: "center",paddingRight:"100px" }}>
           {value}
         </td>
-        <td style={{ borderBottom: "1px solid #ddd", textAlign: "center" }}>
+        <td style={{ borderBottom: "1px solid #ddd", textAlign: "center",paddingRight:"100px" }}>
           {value2}
         </td>
-        <td style={{ borderBottom: "1px solid #ddd", textAlign: "center" }}>
+        <td style={{ borderBottom: "1px solid #ddd", textAlign: "center",paddingRight:"100px" }}>
           {percentage}
         </td>
       </tr>
     );
   }
+  function Table({ table}) {
+
+    return (
+      <table  style={{
+        width: "1200px",
+        height: "400px",
+        textAlign: "center",
+        borderCollapse: "collapse",
+        border: " solid 1px black",
+      }}></table>
+
+    );
+
+  }
+  // function Wrapper({ flex, children }) {
+  //   return <div style={flex && { display: "flex" }}>{children}</div>;
+  // }
+  
+  function Wrapper({ flex, w, children }) {
+    return <_Wrapper flex={flex}>{children}</_Wrapper>;
+  }
+
+
+ 
+    
 
   return (
     <Body>
       <Header>
-        <HeaderListPart>
-          <ul>
-            <LI button type="button" onClick={AboutAutohub}>
+        <HeaderListPart flex>
+          <ul style={{}}>
+            <ALI button type="button" onClick={AboutAutohub}>
               단지안내
-            </LI>
-            <LI button type="button" onClick={SellClick}>
+            </ALI>
+            <LI button type="button" onClick={CharClick}>
               주요특장점
             </LI>
             <LI button type="button" onClick={FloorClick}>
@@ -122,8 +156,8 @@ function AboutAutohub() {
             />
           </div>
 
-          <h2 style={{}}>자동차 매매당지의 패러다임을 바꾼 오토허브 입니다.</h2>
-          <p className="TxtContent" style={{}}>
+          <h2  className="TxtTitle" style={{}}>자동차 매매당지의 패러다임을 바꾼 오토허브 입니다.</h2>
+          <p className="TxtContent" style={{ textAlign: "left" }}>
             61,000 여평 규모의 오토허브는 2018년부터 운영된 최초의 대형
             매매단지로서, 현재까지 허위매물 없이 안전하게 단지 운영을 하여
             고객들에게 사랑을 받아오고 있습니다.
@@ -143,8 +177,12 @@ function AboutAutohub() {
         </IntroPart>
       </IntroWrappeer>
 
+      
+  
+
       <DetailWrapper>
         <DetailPart>
+          <Wrapper flex>hello</Wrapper>
           <h3 style={{ textAlign: "left" }}>세부 면적</h3>
           <p style={{ textAlign: "left" }}>
             최대8,000대의 실내 전시가 가능하며, 최대1,300대의 고객 주차가 가능한
@@ -158,7 +196,7 @@ function AboutAutohub() {
             <table
               style={{
                 width: "100%",
-                borderCollapse: "collapse",
+                // borderCollapse: "collapse",
                 border: " solid 1px black",
               }}
             >
@@ -168,28 +206,15 @@ function AboutAutohub() {
                     fontWeight: "bold",
                     fontSize: "25px",
                     padding: "20px",
+                    textAlign: "left",
                   }}
                 >
                   건축 개요
                 </th>
               </tr>
 
-              <tr>
-                <td
-                  style={{
-                    borderBottom: "1px solid #ddd",
-                    padding: "10px 25px",
-                  }}
-                >
-                  토지면적
-                </td>
-
-                <td style={{ borderBottom: "1px solid #ddd" }}>
-                  88,716 ㎡ (26,836,59평)
-                </td>
-
-                <td style={{ borderBottom: "1px solid #ddd" }}></td>
-              </tr>
+             
+              <Tr title="토지면적" value="88,716 ㎡ (26,836,59평)" />
               <Tr title="건축연면적" value="175,676,72 ㎡ (53,142.21평)" />
               <Tr title="용도" value="자동차 관련 시설 및 부대시설" />
               <Tr title="층수" value="지하 4층, 지상 4층" />
@@ -202,18 +227,49 @@ function AboutAutohub() {
                     fontWeight: "bold",
                     fontSize: "25px",
                     padding: "20px",
+                    textAlign: "left",
                   }}
                 >
                   용도별 면적
                 </th>
               </tr>
 
-              <Tr2 title="구분" value="면적" value2="구성비" percentage="구분"/>
-              <Tr2 title="전시장" value="139,520㎡ " value2="(42,205평)" percentage="79%"/>
-              <Tr2 title="근린생활" value="20,631㎡ " value2="(6,241평)" percentage="12%" />
-              <Tr2 title="정비시설" value="15,526㎡ " value2="(4,697평)" percentage="9%" />
-              <Tr2 title="합계" value="175,677㎡ " value2="(53,142평)" percentage="100%" />
-              <Tr2 title="구분" value="면적" value2="구성비" percentage="구분" />
+              <Tr2
+                title="구분"
+                value="면적"
+                value2="구성비"
+                percentage="구분"
+              />
+              <Tr2
+                title="전시장"
+                value="139,520㎡ "
+                value2="(42,205평)"
+                percentage="79%"
+              />
+              <Tr2
+                title="근린생활"
+                value="20,631㎡ "
+                value2="(6,241평)"
+                percentage="12%"
+              />
+              <Tr2
+                title="정비시설"
+                value="15,526㎡ "
+                value2="(4,697평)"
+                percentage="9%"
+              />
+              <Tr2
+                title="합계"
+                value="175,677㎡ "
+                value2="(53,142평)"
+                percentage="100%"
+              />
+              <Tr2
+                title="구분"
+                value="면적"
+                value2="구성비"
+                percentage="구분"
+              />
               <Tr title="*별도.고객 주차장:27,500㎡ (8,319평) 1,270대" />
             </table>
           </div>
@@ -296,23 +352,32 @@ function AboutAutohub() {
       </FacilitiesWrapper>
 
       <LocationWrapper>
-        <div class="LocationPart" style={{textAlign:"center"}}>
-        <h2 style={{ fontSize:"30px"}}>최적의 교통 환경과 입지</h2>
-        <p style={{fontSize:"20px" }}> <br/>
-        수원 신갈IC와 3분 거리에 위치하여 서울 강남권과 경기 암부 30분 이내에 도착 가능합니다.</p>
-        <div>
-        <img style={{width:"900px"}} src="/images/오토허브건물2.jpeg" />
+        <div class="LocationPart" style={{ textAlign: "center" }}>
+          <h2 style={{ fontSize: "30px" }}>최적의 교통 환경과 입지</h2>
+          <p style={{ fontSize: "20px" }}>
+            {" "}
+            <br />
+            수원 신갈IC와 3분 거리에 위치하여 서울 강남권과 경기 암부 30분
+            이내에 도착 가능합니다.
+          </p>
+          <div>
+            <img style={{ width: "900px" }} src="/images/오토허브건물2.jpeg" />
+          </div>
         </div>
-        </div>
-
       </LocationWrapper>
     </Body>
   );
 }
+const _Wrapper = styled.div`
+  ${({ flex }) => flex && "display:flex;"}
+`;
 
 const Body = styled.body`
   /* box-sizing: border-box; */
   font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 `;
 const Header = styled.div`
   padding: 50px 0;
@@ -327,16 +392,30 @@ const LI = styled.li`
   list-style: none;
   float: left;
   padding: 10px 10px;
+  border-bottom: 3px solid transparent;
+  &:hover {
+    border-bottom: 3px solid red;
+  }
+`;
+const ALI = styled.li`
+  list-style: none;
+  float: left;
+  padding: 10px 10px;
+  border-bottom: 3px solid red;
 `;
 const IntroWrappeer = styled.div``;
 const IntroPart = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const DetailWrapper = styled.div`
   padding-top: 50px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+
+  align-items: center;
 `;
 const DetailPart = styled.div``;
 const Table = styled.table;
@@ -348,6 +427,12 @@ const Button = styled.button`
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 3px #808080;
+  &after {
+      position: relative;
+      top: 10px;
+      
+      left: 10px;
+  }
 `;
 
 const FacilitiesWrapper = styled.div`
@@ -355,10 +440,11 @@ const FacilitiesWrapper = styled.div`
   justify-content: center;
 `;
 const LocationWrapper = styled.div`
-padding: 0 200px;
-margin-top: 50px;
-display: flex;
-justify-content: center;
-
+  padding: 0 200px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 `;
+
+
 export default AboutAutohub;

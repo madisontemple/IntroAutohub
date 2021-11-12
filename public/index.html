@@ -2,38 +2,42 @@
 <html lang="en">
   <head>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d95093a24189fb63ad8b18bbc12fedca">
-    var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-var options = { //지도를 생성할 때 필요한 기본 옵션
-	center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-	level: 3 //지도의 레벨(확대, 축소 정도)
-};
-var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d95093a24189fb63ad8b18bbc12fedca"
+    >
+          var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+      var options = { //지도를 생성할 때 필요한 기본 옵션
+      	center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+      	level: 3 //지도의 레벨(확대, 축소 정도)
+      };
+      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
     </script>
 
-<script>
-  window.counter = function() {
-    // this refers to the html element with the data-scroll-showCallback tag
-    var span = this.querySelector('span');
-    var current = parseInt(span.textContent);
-  
-    span.textContent = current + 1;
-  };
-  
-  document.addEventListener('DOMContentLoaded', function(){
-    var trigger = new ScrollTrigger({
-      addHeight: true
-    });
-  });
-  </script>
+    <script>
+      window.counter = function () {
+        // this refers to the html element with the data-scroll-showCallback tag
+        var span = this.querySelector("span");
+        var current = parseInt(span.textContent);
+
+        span.textContent = current + 1;
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var trigger = new ScrollTrigger({
+          addHeight: true,
+        });
+      });
+    </script>
 
     <meta charset="utf-8" />
-  // scroll animation
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  //
+
+    <!-- scroll animation-->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -54,27 +58,39 @@ var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-// Abril Fatface Font
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> 
-  // font-family: 'Abril Fatface', cursive; 
+    <!-- Abril Fatface Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Abril Fatface', cursive;-->
 
-  // Alfa Slab One
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&display=swap" rel="stylesheet">
-// font-family: 'Alfa Slab One', cursive;
+    <!-- Alfa Slab One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Alfa Slab One', cursive;-->
 
-// Merriweather Sans
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Merriweather+Sans&display=swap" rel="stylesheet">
-// font-family: 'Merriweather Sans', sans-serif;
+    <!-- Merriweather Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Merriweather+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Merriweather Sans', sans-serif;-->
 
     <title>Autohub_React</title>
   </head>

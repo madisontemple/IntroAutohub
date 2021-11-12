@@ -4,7 +4,7 @@ import Search from "../icon/search-solid.svg";
 // import Navbar from "./Navbar";
 import { SearchBox } from "react-instantsearch-dom";
 import { useHistory } from "react-router-dom";
-
+import { BiSearch } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { FiArrowRightCircle } from "react-icons/fi";
@@ -12,13 +12,13 @@ import { FiArrowRightCircle } from "react-icons/fi";
 
 function Home() {
   const history = useHistory();
-  // const BuyClick = () => history.push("./Buy");
-  // const SellClick = () => history.push("./Sell");
-  // const ManagedClick = () => history.push("./Managed");
-  // const AboutAutohub = () => history.push("./AboutAutohub");
-  // const CCenterClick = () => history.push("./CCenter");
-  // const JoinClick = () => history.push("./Join");
-  // const LoginClick = () => history.push("./Login");
+  const BuyClick = () => history.push("./Buy");
+  const SellClick = () => history.push("./Sell");
+  const ManagedClick = () => history.push("./Managed");
+  const AboutAutohub = () => history.push("./AboutAutohub");
+  const CCenterClick = () => history.push("./CCenter");
+  const JoinClick = () => history.push("./Join");
+  const LoginClick = () => history.push("./Login");
 
   const SearchClick = () => history.push("./SearchResult");
   const HyundaiClick = () => history.push("./Hyundai");
@@ -32,529 +32,303 @@ function Home() {
   const Shop3Click = () => history.push("./Shop3");
   const Shop4Click = () => history.push("./Shop4");
 
+  const StyledWrapper = styled.div`
+  ${({flex}) => flex && 'display: flex;'}
+
+  
+
+  `;
+
   return (
-    <div style={{}}>
-      <Header>
-        <Header2>
-          <div style={{ height: "350px", display: "flex", width: "100%",marginTop:"30px" }}>
-            <LeftImage src="/images/Autohub.HeadersLeft.png" />
+    <Body>
+    <HeaderWrapper>
+    <HeaderImagePart>
+    <HeaderImage src="/images/Autohub.HeadersLeft.png" />
 
-            <SearchPart>
-              <div
-                style={{
-                  display: "flex",
-                  gap: "20px",
-                  padding: "40px 20px",
-                }}
-              >
-                <SearchComment>
-                  지금 바로 키워드로 검색해보세요! 무엇이든 찾아드립니다.
-                </SearchComment>
-              </div>
-              <div className="InputPart" style={{ padding: "15px 20px" }}>
-                <SearchInput></SearchInput>
-                <FaSearch
-                  button
-                  type="button"
-                  onClick={SearchClick}
-                  style={{
-                    width: "30px",
-                    height: "30px",
-                    position: "relative",
-                    right: "50px",
-                    top: "5px",
-                    color: "#f11843",
-                    cursor: "pointer",
-                  }}
-                />
-              </div>
-              <Buttons>
-                <Button button type="button" onClick={HyundaiClick}>
-                  현대
-                </Button>
-                <Button button type="button" onClick={KiaClick}>
-                  기아
-                </Button>
-                <Button button type="button" onClick={BenzClick}>
-                  벤츠
-                </Button>
-                <Button button type="button" onClick={BmwClick}>
-                  Bmw
-                </Button>
-                <Button button type="button" onClick={GenesisClick}>
-                  제네시스
-                </Button>
-              </Buttons>
-            </SearchPart>
-          </div>
-        </Header2>
-      </Header>
+    </HeaderImagePart>
+    
+<HeaderRightWrapper>
 
-      <div class="MainContents" style={{ minWidth: "1500px" }}>
-        <MainComment>인기있는4대의 자동차</MainComment>
-        <ImagePart>
-          <MainPart>
-            <a href="https://blog.naver.com/ats00673" target="_blank">
-              {" "}
-              <MainImage src="/images/Autohub.Main1.png" />{" "}
-            </a>
-          </MainPart>
-          <div class="OtherPart">
-            <Other1
-              src="/images/Autohub.Main2.png"
-              button
-              type="button"
-              onClick={Shop1Click}
-            />
-            <Other2
-              src="/images/Autohub.Main3.png"
-              button
-              type="button"
-              onClick={Shop2Click}
-            />
-            <Other3
-              src="images/Autohub.Main4.png"
-              button
-              type="button"
-              onClick={Shop3Click}
-            />
-            <Other4
-              src="images/Autohub.Main5.png"
-              button
-              type="button"
-              onClick={Shop4Click}
-            />
-          </div>
-        </ImagePart>
-      </div>
+<HeaderRightPart>
 
-      <div class="FinestPart" style={{ minWidth: "1500px" }}>
-        <a
-          href="https://www.finset.io/loan/compareGoods?promotionCode=autohub"
-          target="_blank"
-        >
-          <FinsetN src="images/FinsetImage.png" />
-        </a>
-      </div>
+<HeaderRightPartComment>지금 바로 키워드로 검색해보세요! 무엇이든 찾아드립니다.</HeaderRightPartComment>
 
-      <div class="HelpPart" style={{ display: "flex", minWidth: "1500px" }}>
-        <div class="FaqPart">
-          <FAQ>FAQ</FAQ>
+<HeaderRightSearchPart>
+<SearchInput></SearchInput>
+<BiSearch style={{width:"50px",height:"40px",color:"#f11843",position:"relative",right:"80px",top:"5px",cursor:"pointer"}} />
+</HeaderRightSearchPart>
 
-          <FAQListPart>
-            <FaqList>차량 구매시 필요서류는 무엇인가요?</FaqList>
 
-            <FaqList>차량 구매 시 카드로 구매가 가능한가요?</FaqList>
+<HeaderButtonPart>
 
-            <FaqList>대차구매(차량밎교환)가 가능한가요?</FaqList>
-          </FAQListPart>
-        </div>
-        <div class="CCPart">
-          <CC>고객센터</CC>
+<HeaderButton primary>현대</HeaderButton>
+<HeaderButton primary>기아</HeaderButton>
+<HeaderButton primary>Bmw</HeaderButton>
+<HeaderButton primary>벤츠</HeaderButton>
+<HeaderButton primary>제네시스</HeaderButton>
+</HeaderButtonPart>
 
-          <CCInfo>
-            <PNumber>1811-9393</PNumber>
+</HeaderRightPart>
+</HeaderRightWrapper>
 
-            <Hour>
-              연중무휴
-              <br />
-              09:00 ~ 18:00
-            </Hour>
-          </CCInfo>
-          <Location>
-            <Nav>위치안내</Nav>
+    </HeaderWrapper>
+<MainWrapper>
+<MainLeftPart>
+<MainComment>인기있는 4대의 자동차</MainComment>
+<MainImagePart>
+<MainImage src="/images/Autohub.Main1.png" />
 
-            <FiArrowRightCircle
-              style={{
-                width: "40px",
-                height: "40px",
-                position: "relative",
-                bottom: "30px",
-                left: "250px",
-                color: "#f11843",
-                cursor: "pointer",
-              }}
-            />
-          </Location>
-          <OnetoOne>
-            <Ask>1:1 문의</Ask>
-            <FiArrowRightCircle
-              style={{
-                width: "40px",
-                height: "40px",
-                position: "relative",
-                bottom: "30px",
-                left: "250px",
-                color: "#f11843",
-                cursor: "pointer",
-              }}
-            />
-          </OnetoOne>
-        </div>
-      </div>
+</MainImagePart>
 
-      <div class="FooterPart">
-        <FooterArea>
-          <div class="ListPart">
-            <ListMain>
-              <UnderLine>
-                <About>회사소개</About>
-                <FooterList>이용약관</FooterList>
-                <FooterList>개인정보처리방침</FooterList>
-                <FooterList>마케팅</FooterList>
-              </UnderLine>
-            </ListMain>
-            <OtherLists>
-              <p>
-                <strong>사업자등록번호 </strong> 454-88-00618
-                <strong>개인정보책임자 </strong> 이동녕
-              </p>
-              <p>
-                <strong> 주소 </strong> 경기도 용인시 기흥구 중부대로 242(영덕동
-                21-1)
-              </p>
-              <p>
-                <strong> Tel </strong> 1811-9393 <strong> Fax </strong> 031)
-                5182-5009 <strong> Email </strong> admin@nsautohub.com
-              </p>
-              <p>Copyrights © AUTOHUB. All rights reserved.</p>
-            </OtherLists>
-            <div class="download">
-              <DownloadImg src="/images/매물공유 다운로드.png" />
-            </div>
-          </div>
-        </FooterArea>
-      </div>
-    </div>
+</MainLeftPart>
+
+<MainRightWrapper>
+
+<MainRightPart>
+<MainRightImage src="/images/Autohub.Main2.png" />
+<MainRightImage src="/images/Autohub.Main3.png" />
+
+
+</MainRightPart>
+<MainRightPart>
+<MainRightImage src="/images/Autohub.Main4.png" />
+<MainRightImage src="/images/Autohub.Main5.png" />
+
+</MainRightPart>
+</MainRightWrapper>
+</MainWrapper>
+    
+    <FinsetNWrapper>
+      <FinsetNImagePart>
+        <FinsetNImage src="/images/FinsetImage.png" />
+      </FinsetNImagePart>
+    </FinsetNWrapper>
+    <FAQWrapper>
+      <FAQPart>
+      
+        <FAQ>FAQ</FAQ>
+        <HR />
+        <FAQList>차량 구매시 필요서류는 무엇인가요?</FAQList>
+        <HR />
+        <FAQList>차량 구매시 카드로 구매가 가능한가요?</FAQList>
+        <HR />
+        <FAQList>대체구매(차량맞교환)가 가능한가요?</FAQList>
+        <HR />
+      </FAQPart>
+      <CustomerCenterPart>
+      <FAQTxtPart>
+      <FAQ>고객센터</FAQ>
+
+      </FAQTxtPart>
+      <CustomerCenterSquare> <h1 style={{color:"#f11843"}}>1811-9393</h1>
+      <p>연중무휴</p>
+      <p>09:00~18:00</p>
+      </CustomerCenterSquare>
+      </CustomerCenterPart>
+
+      <CustomerCenterSquare2Part >
+
+
+      <CustomerCenterSquare2>
+
+      </CustomerCenterSquare2>
+
+      <CustomerCenterSquare2>
+
+      </CustomerCenterSquare2>
+      
+      </CustomerCenterSquare2Part>
+
+
+
+
+    </FAQWrapper>
+
+
+      
+    </Body>
   );
 }
+const Body = styled.body`
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+`;
+const HeaderWrapper = styled.div`
+height: 350px;
+padding-top: 50px;
+background-color:#f11843 ;
+display: flex;
+justify-content: center;
 
-const Header = styled.div`
-  width: 100%;
-  max-width: 1500px;
-  min-width: 340px;
-  /* flex-wrap: initial; */
-  display: flex;
-  flex-grow: 0;
-  justify-content: center;
-  align-items: center;
-  
-  background: #f11843;
-  /* overflow: hidden; */
-  
 `;
-const Menu = styled.div`
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  margin-top: -10px;
-  padding-right: 0px;
-  background: #f11843;
-  width: 100%;
-`;
+const HeaderImagePart = styled.div`
 
-const AutohubLogo = styled.img`
-  width: 150px;
-  height: 40px;
-  margin-left: 80px;
-  cursor: pointer;
 `;
+const HeaderImage = styled.img`
+width: 35rem;
+height: 15rem;
+padding: 60px 0px;
 
-const HeaderList = styled.div`
-  display: flex;
-  width: 50%;
 `;
+const HeaderRightWrapper = styled.div`
 
-const LeftsideMenuList = styled.div`
-  list-style: none;
-  margin-left: 30px;
+`;
+const HeaderRightPart = styled.div`
 
-  color: white;
-  font-weight: 900;
-  font-size: 15px;
-  cursor: pointer;
-`;
+padding: 80px 20px 0px 30px;
+margin-left: 30px;
 
-const Rightside = styled.div`
-  display: flex;
-  width: 50%;
-  justify-content: flex-end;
-  padding-right: 100px;
-`;
 
-const RightsideMenuList = styled.div`
-  color: white;
-  font-weight: 900;
-  font-size: 15px;
-  cursor: pointer;
-  margin-left: -10px;
-  padding-right: 60px;
 `;
+const HeaderRightCommentPart = styled.div`
 
-const Header2 = styled.div`
-  display: flex;
-  min-width: 1500px;
-  align-items: center;
-  background: #f11843;
-  align-items: center;
 `;
-const LeftImage = styled.img`
-  height: 230px;
-  width: 600;
-  margin-top: 80px;
-  margin-left: 70px;
+const HeaderRightPartComment = styled.h2`
+color: #fff;
+font-size: 15px;
+
+padding-left: 10px;
+
+
 `;
-const SearchPart = styled.div`
-  width: 50%;
-  background: #f11843;
-`;
-const SearchComment = styled.div`
-  color: white;
-  font-weight: 700;
-  position: relative;
-  top: 30px;
-  left: 10px;
+const HeaderRightSearchPart = styled.div`
+
 `;
 const SearchInput = styled.input`
-  width: 600px;
-  height: 70px;
-  border-radius: 30px;
-  font-size: 25px;
-  padding-left: 30px;
-  border: none;
-  outline-width: 0;
+border-radius: 40px;
+margin-top: 10px;
+
+padding: 10px 0 0 30px;
+width: 40rem;
+height: 70px;
+border-style: none;
+font-size: 30px;
+outline: none;
+
 `;
-//  const SearchIcon = styled.FaSearch`
+const HeaderButtonPart = styled.div`
+margin: 10px 0px;
 
-//  `;
-
-const Buttons = styled.div`
-  background: #f11843;
-  padding: 20px 10px;
 `;
-const Button = styled.button`
-  margin-left: 18px;
+const HeaderButton = styled.button`
+  background: ${props => props.primary ? "#f11843" : "white"};
+  margin: 0px 17px 0px 0px;
+  width: 7.5rem;
+  height: 3rem;
+  border-radius: 40px;
+  border: 2px solid white;
+  color: #fff;
+  font-weight: bold;
 
-  width: 108px;
-  height: 40px;
-  border-radius: 30px;
-  font-size: 12px;
-  font-weight: 700;
-  color: white;
-  background-color: #f11843;
-  transition-duration: 0.2s;
-  border: 1px solid white;
-  cursor: pointer;
   &:hover {
-    background-color: #66180ef6;
-    color: white;
+    background-color: #C13B2E;
   }
 `;
+const MainWrapper = styled.div`
+display: flex;
+justify-content: center;
+margin-top: 30px;
+`;
+const MainPart = styled.div`
 
-const MainComment = styled.div`
-  color: black;
-  font-size: 30px;
-  font-weight: 700;
-  padding-top: 70px;
-  margin-left: 80px;
-  white-space: nowrap;
 `;
-const ImagePart = styled.div`
-  display: flex;
-  width: fit-content;
-  border-radius: 20px;
-  margin-left: 80px;
-  margin-top: -100px;
+const MainLeftPart = styled.div`
+
 `;
-const MainPart = styled.div``;
+const MainComment = styled.h1`
+
+`;
+const MainImagePart = styled.div`
+
+`;
 const MainImage = styled.img`
-  width: 600px;
-  height: 655px;
-  margin-top: 190px;
-  margin-left: 0px;
-  border-radius: 20px;
-  cursor: pointer;
+width: 40rem;
+height: 40rem;
+border-radius: 10px;
 `;
-const Other1 = styled.img`
-  width: 320px;
-  margin-top: 190px;
-  margin-left: 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  object-position: center;
+const MainRightWrapper = styled.div`
+padding-top: 70px;
 `;
-const Other2 = styled.img`
-  width: 320px;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 20px;
-  height: 315px;
-  cursor: pointer;
-  object-position: center;
-`;
-const Other3 = styled.img`
-  width: 320px;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  object-position: center;
-`;
-const Other4 = styled.img`
-  width: 320px;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  object-position: center;
-`;
-const FinsetN = styled.img`
-  width: 80vw;
+const MainRightPart = styled.div`
+padding: 10px 40px 20px 0px;
 
-  height: 20vw;
-  margin-top: 100px;
-  margin-left: 80px;
-  border-radius: 20px;
-  cursor: pointer;
-  min-width: 1280px;
-  object-fit: fill;
 `;
 
-const FAQ = styled.div`
-  font-size: 25px;
-  font-weight: 700;
-  margin-left: 80px;
-  margin-top: 60px;
-  border-bottom: 1px solid #d4d3d3;
-  width: 560px;
-  padding-bottom: 30px;
+const MainRightImage = styled.img`
+width: 19rem;
+height: 19rem;
+border-radius: 10px;
+margin-left: 20px;
 `;
-const FAQListPart = styled.div`
-  font-size: 17px;
-  font-weight: 700;
-  margin-left: 90px;
-  margin-top: 10px;
+const FinsetNWrapper = styled.div`
+display: flex;
+justify-content: center;
 `;
-const FaqList = styled.div`
-  border-bottom: 1px solid #d4d3d3;
-  margin-top: 0px;
-  padding-top: 10px;
-  margin-left: -10px;
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  width: 550px;
-  cursor: pointer;
+const FinsetNImagePart = styled.div`
+
 `;
-const CC = styled.div`
-  font-size: 25px;
-  font-weight: 700;
-  margin-top: 70px;
-  margin-left: 10px;
-  min-width: 1500px;
+const FinsetNImage = styled.img`
+margin-top: 60px;
+padding-right: 40px;
+width: 80.5rem;
 `;
 
-const CCInfo = styled.div`
-  width: 25vw;
-  height: 13vw;
-  border: 1px solid #d4d3d3;
+const FAQWrapper = styled.div`
+display: flex;
+justify-content: center;
+
+margin-top: 60px;
+`;
+const FAQPart = styled.div`
+padding-right: 15px;
+
+`;
+const FAQTxtPart = styled.div`
+
+`;
+const FAQ = styled.h2`
+
+`;
+const HR = styled.hr`
+width: 40rem;
+`;
+const FAQList = styled.p`
+font-weight: bold;
+font-size: 17px;
+`;
+const CustomerCenterPart = styled.div`
+margin-left: 20px;
+
+`;
+const CustomerCenterSquare = styled.div`
+  width: 300px;
+  height: 160px;
   border-radius: 10px;
-  margin-top: 17px;
-  margin-left: 10px;
+  outline: 1px solid black;
+  padding: 5px 0px 5px 30px;
+  
 `;
-const PNumber = styled.div`
-  font-size: 30px;
-  font-weight: 700;
-  color: #f11843;
-  margin-top: 15px;
-  margin-left: 20px;
+const CustomerCenterSquare2Part = styled.div`
+margin-top: 50px;
+padding: 10px 0px 10px 10px;
 `;
-
-const Hour = styled.div`
-  font-weight: 700;
-  color: #aeacac;
-  margin-top: 90px;
-  margin-left: 25px;
-`;
-
-const Location = styled.div`
-  width: 21vw;
-  height: 6vw;
-  border: 1px solid #d4d3d3;
+const CustomerCenterSquare2 = styled.div`
+  width: 300px;
+  height: 70px;
   border-radius: 10px;
-  margin-left: 380px;
-  position: relative;
-  bottom: 190px;
+  outline: 1px solid black;
+  margin: 10px 0px 0px 0px;
+  padding: 7px 0px 0px 10px;
+  
 `;
 
-const Nav = styled.div`
-  font-size: 20px;
-  font-weight: 700;
-  color: #aeacac;
-  margin-top: 30px;
-  margin-left: 20px;
-  min-width: 1500px;
-`;
-const OnetoOne = styled.div`
-  width: 21vw;
-  height: 6vw;
-  border: 1px solid #d4d3d3;
-  border-radius: 10px;
-  position: relative;
-  left: 380px;
-  bottom: 180px;
-`;
-const Ask = styled.div`
-  font-size: 20px;
-  color: #aeacac;
-  font-weight: 700;
-  margin-top: 30px;
-  margin-left: 20px;
-  min-width: 1500px;
-`;
-const FooterArea = styled.div`
-  display: flex;
-  /* alignItems: "center", */
-  height: 350px;
-  width: 100%;
-  background: #f0eff0;
-`;
 
-const ListMain = styled.div`
-  display: flex;
-  margin-left: 80px;
-  margin-top: 50px;
-`;
 
-const UnderLine = styled.ul`
-  display: flex;
-  list-style: none;
-  padding-left: 10px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #656565;
-`;
-const About = styled.li`
-  cursor: pointer;
-`;
-const FooterList = styled.li`
-  margin-left: 40px;
-  cursor: pointer;
-`;
 
-const OtherLists = styled.div`
-  padding-left: 90px;
-  letter-spacing: 1px;
-  font-size: 14px;
-  color: #656565;
-`;
-const DownloadImg = styled.img`
-  width: 150px;
-  height: 45px;
-  border-radius: 10px;
-  margin-left: 85px;
-  margin-top: 40px;
-  cursor: pointer;
-`;
+
+
+
+
 
 export default Home;
