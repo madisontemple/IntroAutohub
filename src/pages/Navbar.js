@@ -27,7 +27,7 @@ function Navbar() {
         <HeaderLeftListPart>
 
         
-          <HeaderLeftList>살때는as</HeaderLeftList>
+          <HeaderLeftList>살때</HeaderLeftList>
           <HeaderLeftList>팔때</HeaderLeftList>
           <HeaderLeftList>직영차</HeaderLeftList>
           <HeaderLeftList button type="button" onClick={AboutAutohub}>단지안내</HeaderLeftList>
